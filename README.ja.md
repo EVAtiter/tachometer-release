@@ -1,15 +1,29 @@
 [English](README.md) | [日本語](README.ja.md)
 
-# Tachometer
+# Tachometer / Tachometer Plus
 
-ネットワークとディスクのトラフィックを、自動車のタコメーター風アナログメーター 4 連で表示する macOS メニューバー常駐アプリ。
+Mac のネットワーク・ディスク・メモリー・消費電力を、自動車のタコメーター風アナログメーターで表示する macOS メニューバー常駐アプリ。
 
 **➡️ [最新版をダウンロード](https://github.com/EVAtiter/tachometer-release/releases/latest)**
 
+このリポジトリで配布しているのは、6 計器すべてを備えた Developer ID 署名版 **Tachometer Plus** です。消費電力計を除く 5 計器版「**Tachometer**」は Mac App Store でも配布しています。
+
+## 計器構成
+
+| 計器 | Tachometer | Tachometer Plus |
+| --- | --- | --- |
+| ネットワーク下り / 上り | ✅ | ✅ |
+| ディスク読み込み / 書き込み | ✅ | ✅ |
+| メモリー | ✅ | ✅ |
+| 消費電力 (SoC) | — | ✅ |
+
+各計器は独立した小さな真円ウインドウで表示され (どこへでもドラッグ配置でき、ディスプレイごとに位置を記憶)、メニューから個別に表示 / 非表示を切り替えられます。
+
 ## 機能
 
-- **4 つの独立した計器** — ネットワーク下り / 上り、ディスク読み込み / 書き込みを、それぞれ小さな真円ウインドウで表示。どこへでもドラッグ配置でき、ディスプレイごとに位置を記憶。各計器はメニューから個別に表示 / 非表示を切替できます。
-- **ピーク学習による相対スケール** — 「100%」はあなたの Mac が実際に観測したピーク値。スライディングウィンドウ (5 分 / 15 分 / 30 分 / 1 時間) または ∞ (再起動をまたいで記憶) を選べます。ピークを学習している間はブルーの警告灯が点滅します。
+- **ピーク学習による相対スケール** (トラフィック系計器) — 「100%」はあなたの Mac が実際に観測したピーク値。スライディングウィンドウ (5 分 / 15 分 / 30 分 / 1 時間) または ∞ (再起動をまたいで記憶) を選べます。ピークを学習している間はブルーの警告灯が点滅します。
+- **メモリープレッシャー警告** — メモリー計器の警告灯は、macOS 自身のメモリープレッシャー信号 (正常 / 警告 / 危険) に連動して琥珀色に点灯・点滅します。
+- **消費電力のピーク記憶** (Plus 限定) — 消費電力計は期間を区切らず観測した最大値をずっと記憶し続け (スライディングウィンドウではありません)、専用のリセットコマンドを持ちます。新しいピークを更新中は警告灯がグリーンに点滅します。
 - **静かな針** — 針の動きは平滑化されており、アイドル時はぴたりと静止。起動やスリープ復帰時にはイグニッション風のニードルスイープ演出があります。
 - **2 種類のシンボルセット** — 「クラウド / トレイ」と「ミニマル矢印」をメニューから切替できます。
 - **3 つの表示モード** — 通常 / 最前面 / ウィジェット (壁紙にピン留め・クリック貫通)。
@@ -31,11 +45,11 @@ brew install --cask EVAtiter/tap/tachometer
 
 ### 手動
 
-1. [Releases](https://github.com/EVAtiter/tachometer-release/releases/latest) から `Tachometer-<version>.zip` をダウンロード
-2. 解凍して `Tachometer.app` を `/Applications` へ移動
+1. [Releases](https://github.com/EVAtiter/tachometer-release/releases/latest) から `Tachometer-Plus-<version>.zip` をダウンロード
+2. 解凍して `Tachometer Plus.app` を `/Applications` へ移動
 3. 起動するとメニューバー (ゲージアイコン) に常駐します (Dock には表示されません)
 
-バイナリは Developer ID 署名 + Apple 公証済みです。
+バイナリは Developer ID 署名 + Apple 公証済みです。Tachometer Plus は App Sandbox なしで動作します (消費電力計が SoC の電力データを読むために必要なため)。
 
 ## 使い方
 
@@ -45,7 +59,7 @@ brew install --cask EVAtiter/tap/tachometer
 
 ## 背景
 
-計測部は [Gigant Monitor](https://github.com/EVAtiter/gigant-monitor-support) と共通、アナログメーター描画は Fuel Level Plus のスポーツスタイル文字盤から育ったもの。その 2 つを組み合わせ、「本物のトラフィックを、本物らしい計器で」眺めるアプリです。
+計測部は [Gigant Monitor](https://github.com/EVAtiter/gigant-monitor-support) と共通、アナログメーター描画は Fuel Level Plus のスポーツスタイル文字盤から育ったもの。メモリー計器と消費電力計は、実は Fuel Level Plus の燃料計と消費電力計そのものを Tachometer の文字盤スタイルで描き直したものです。実際のシステムの活動を、本物らしい計器で眺めるアプリです。
 
 ## ライセンス / 著作権
 
