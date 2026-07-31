@@ -61,6 +61,15 @@ brew install --cask EVAtiter/tap/tachometer
 
 計測部は [Gigant Monitor](https://github.com/EVAtiter/gigant-monitor-support) と共通、アナログメーター描画は Fuel Level Plus のスポーツスタイル文字盤から育ったもの。メモリー計器と消費電力計は、実は Fuel Level Plus の燃料計と消費電力計そのものを Tachometer の文字盤スタイルで描き直したものです。実際のシステムの活動を、本物らしい計器で眺めるアプリです。
 
+## サポート
+
+- ご質問・不具合報告・ご要望: [GitHub Discussions](https://github.com/EVAtiter/tachometer-release/discussions)
+- Email: info@slack-kingdom.com
+
+## プライバシー
+
+本アプリは個人情報を一切収集せず、インターネット通信も行いません。詳細は[プライバシーポリシー](PRIVACY.md)をご覧ください。
+
 ## ライセンス / 著作権
 
 Copyright © 2026 EVA Titer. All rights reserved.
