@@ -61,6 +61,15 @@ The binary is signed with a Developer ID and notarized by Apple. Tachometer Plus
 
 Measurement is shared with [Gigant Monitor](https://github.com/EVAtiter/gigant-monitor-support), and the analog gauge rendering grew out of the sport-style dial of Fuel Level Plus — the memory and power gauges are in fact that app's fuel and power gauges, redrawn in Tachometer's dial style. This app puts real system activity on real-feeling instruments.
 
+## Support
+
+- Questions, bug reports, and requests: [GitHub Discussions](https://github.com/EVAtiter/tachometer-release/discussions)
+- Email: info@slack-kingdom.com
+
+## Privacy
+
+The app collects no personal information and does not communicate over the internet. See [Privacy Policy](PRIVACY.md).
+
 ## License / Copyright
 
 Copyright © 2026 EVA Titer. All rights reserved.
