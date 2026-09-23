@@ -1,6 +1,6 @@
 # Privacy Policy / プライバシーポリシー
 
-**Last updated / 最終更新日: 2026-07-31**
+**Last updated / 最終更新日: 2026-09-23**
 
 ---
 
@@ -8,7 +8,7 @@
 
 ### 1. はじめに
 
-Tachometer（App Store 版）および Tachometer Plus（Developer ID 版。以下あわせて「本アプリ」）は、ユーザーのプライバシーを尊重します。本ポリシーは、本アプリがどのような情報を取り扱うか、または扱わないかを明示するものです。
+Tachometer Lite（Mac App Store 版。インストール後のアプリ名は Tachometer）および Tachometer Plus（Developer ID 版。以下あわせて「本アプリ」）は、ユーザーのプライバシーを尊重します。本ポリシーは、本アプリがどのような情報を取り扱うか、または扱わないかを明示するものです。
 
 ### 2. 収集する情報
 
@@ -26,13 +26,14 @@ Tachometer（App Store 版）および Tachometer Plus（Developer ID 版。以�
 
 ### 3. 本アプリが読み取るシステム情報について
 
-本アプリは計器の針を振らせるために、お使いの Mac の以下の指標を約 1 秒ごとに読み取ります。いずれも macOS が提供する公開 API から取得する**集計済みの数値**です。
+本アプリは計器の針を振らせるために、お使いの Mac の以下の指標を約 1〜4 秒ごとに読み取ります。いずれも**集計済みの数値**です。App Store 版は macOS が提供する公開 API だけを使います。Developer ID 版は、これに加えて消費電力・GPU・Neural Engine・温度を、macOS の IOKit を通じてハードウェアの計測値（SMC・IOReport）から読み取ります。
 
 - ネットワークインターフェイスの送受信バイト数（`getifaddrs` / `SCDynamicStoreCopyValue`）
 - ディスクの読み書きバイト数（IOKit の `IOBlockStorageDriver` 統計）
 - 物理メモリの空き容量とメモリ負荷（`host_statistics64` / メモリプレッシャー通知）
 - CPU 使用率（`host_processor_info`）
-- SoC の消費電力・GPU・Neural Engine の稼働状況（Developer ID 版のみ）
+- Mac 全体の消費電力、GPU・Neural Engine の稼働状況（Developer ID 版のみ）
+- CPU・GPU の温度（Developer ID 版のみ）
 
 本アプリが扱うのは、これらの**数値だけ**です。
 
@@ -47,9 +48,10 @@ Tachometer（App Store 版）および Tachometer Plus（Developer ID 版。以�
 
 - 各計器の表示 / 非表示
 - 計器ウインドウの位置と、表示しているディスプレイの識別子
-- 表示モード（通常 / 最前面 / ウィジェット）、照明（自動 / Day / Night）、シンボルの種類
+- ウインドウの置き方（常に最前面 / 壁紙に貼り付ける）、照明（自動 / Day / Night）、シンボルの種類、システムモニターの並べ方
 - ピーク学習の期間設定と、学習したピーク値
 - 「画面下端で呼び出す」の有効 / 無効
+- 設定の移行を済ませたかどうかの印（アップデート時に一度だけ行う処理のため）
 
 これらのデータは、本アプリをアンインストールすることで削除されます。
 
@@ -88,7 +90,7 @@ App Store 版は App Sandbox 下で動作し、ネットワークアクセスの
 
 ### 1. Introduction
 
-Tachometer (App Store edition) and Tachometer Plus (Developer ID edition) — together, "the App" — respect user privacy. This policy outlines what information the App handles and does not handle.
+Tachometer Lite (Mac App Store edition; the installed app is named Tachometer) and Tachometer Plus (Developer ID edition) — together, "the App" — respect user privacy. This policy outlines what information the App handles and does not handle.
 
 ### 2. Information We Collect
 
@@ -106,13 +108,14 @@ Specifically, the App does NOT:
 
 ### 3. About the System Metrics the App Reads
 
-To move the gauge needles, the App reads the following metrics from your Mac about once per second. All of them are **aggregate numbers** obtained through public macOS APIs.
+To move the gauge needles, the App reads the following metrics from your Mac about every 1 to 4 seconds. All of them are **aggregate numbers**. The App Store edition uses only public macOS APIs. The Developer ID edition additionally reads power, GPU and Neural Engine activity, and temperatures from hardware sensors (SMC and IOReport) through macOS IOKit.
 
 - Bytes sent and received on network interfaces (`getifaddrs` / `SCDynamicStoreCopyValue`)
 - Bytes read from and written to disks (IOKit `IOBlockStorageDriver` statistics)
 - Free physical memory and memory pressure (`host_statistics64` / memory pressure notifications)
 - CPU utilization (`host_processor_info`)
-- SoC power draw, GPU and Neural Engine activity (Developer ID edition only)
+- Whole-Mac power draw, GPU and Neural Engine activity (Developer ID edition only)
+- CPU and GPU temperatures (Developer ID edition only)
 
 These **numbers are the only thing the App handles**.
 
@@ -127,9 +130,10 @@ The App stores the following information only on your Mac (UserDefaults / sandbo
 
 - Which gauges are shown or hidden
 - Gauge window positions and the identifier of the display they appear on
-- Display mode (normal / always-on-top / widget), lighting (auto / day / night), and symbol set
+- Window placement (Always on Top / Pin to Wallpaper), lighting (auto / day / night), symbol set, and System Monitor layout
 - Peak-learning window setting and the learned peak values
-- Whether "reveal at the bottom edge of the screen" is enabled
+- Whether "Quick Reveal" (reveal at the bottom edge of the screen) is enabled
+- A marker recording that one-time settings migrations have been completed
 
 This data is deleted when the user uninstalls the App.
 
