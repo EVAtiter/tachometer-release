@@ -28,7 +28,7 @@ Each instrument lives in its own window (draggable anywhere, per-display positio
 - **Memory pressure warning** — the memory gauge's lamp lights amber and blinks in sync with macOS's own memory pressure signal (normal / warning / critical).
 - **Power peak memory** (Plus only) — the Power Meter remembers its all-time peak draw indefinitely. The lamp blinks green while a new peak is being set.
 - **ANE lamp** (Plus only) — the CPU/GPU Gauge's pink lamp lights when the Apple Neural Engine is working and blinks as its utilization rises.
-- **Temperature gauges** (Plus only) — CPU and GPU temperatures on a 40–100 °C scale. The lamp lights at 85 °C and blinks at 95 °C.
+- **Temperature gauges** (Plus only) — CPU and GPU temperatures on a 30–110 °C scale. The lamp lights at 80 °C and blinks at 90 °C.
 - **System Monitor** — about 50 seconds of CPU and power history drawn as stacked cubes, in three layouts (Overlay / Split / Center; Plus only). Click it to switch to a numeric readout.
 - **Gather Gauges** — lines up the other instruments around the CPU/GPU Gauge's current position.
 - **Quick Reveal** — rest the pointer at the bottom edge of the screen for about half a second to bring the instruments to the front (off by default).
