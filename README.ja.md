@@ -76,7 +76,6 @@ brew install --cask EVAtiter/tap/tachometer
 ## サポート
 
 - ご質問・不具合報告・ご要望: [GitHub Discussions](https://github.com/EVAtiter/tachometer-release/discussions)
-- Email: info@slack-kingdom.com
 
 ## プライバシー
 
