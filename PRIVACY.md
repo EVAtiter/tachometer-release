@@ -1,6 +1,6 @@
 # Privacy Policy / プライバシーポリシー
 
-**Last updated / 最終更新日: 2026-09-23**
+**Last updated / 最終更新日: 2026-11-05**
 
 ---
 
@@ -32,7 +32,7 @@ Tachometer Lite（Mac App Store 版。インストール後のアプリ名は Ta
 - ディスクの読み書きバイト数（IOKit の `IOBlockStorageDriver` 統計）
 - 物理メモリの空き容量とメモリ負荷（`host_statistics64` / メモリプレッシャー通知）
 - CPU 使用率（`host_processor_info`）
-- Mac 全体の消費電力、GPU・Neural Engine の稼働状況（Developer ID 版のみ）
+- Mac 全体とチップ（SoC）の消費電力、GPU・Neural Engine の稼働状況（Developer ID 版のみ）
 - CPU・GPU の温度（Developer ID 版のみ）
 
 本アプリが扱うのは、これらの**数値だけ**です。
@@ -114,7 +114,7 @@ To move the gauge needles, the App reads the following metrics from your Mac abo
 - Bytes read from and written to disks (IOKit `IOBlockStorageDriver` statistics)
 - Free physical memory and memory pressure (`host_statistics64` / memory pressure notifications)
 - CPU utilization (`host_processor_info`)
-- Whole-Mac power draw, GPU and Neural Engine activity (Developer ID edition only)
+- Whole-Mac and chip (SoC) power draw, GPU and Neural Engine activity (Developer ID edition only)
 - CPU and GPU temperatures (Developer ID edition only)
 
 These **numbers are the only thing the App handles**.
