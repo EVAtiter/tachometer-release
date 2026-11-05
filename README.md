@@ -84,5 +84,3 @@ The app collects no personal information and does not communicate over the inter
 ## License / Copyright
 
 Copyright © 2026 EVA Titer. All rights reserved.
-
-This repository distributes binary releases only.
