@@ -84,5 +84,3 @@ brew install --cask EVAtiter/tap/tachometer
 ## ライセンス / 著作権
 
 Copyright © 2026 EVA Titer. All rights reserved.
-
-このリポジトリはバイナリ配布専用です。
