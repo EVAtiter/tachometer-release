@@ -76,7 +76,6 @@ Measurement is shared with [Gigant Monitor](https://github.com/EVAtiter/gigant-m
 ## Support
 
 - Questions, bug reports, and requests: [GitHub Discussions](https://github.com/EVAtiter/tachometer-release/discussions)
-- Email: info@slack-kingdom.com
 
 ## Privacy
 
