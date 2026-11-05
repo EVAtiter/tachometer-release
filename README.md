@@ -29,9 +29,9 @@ Each instrument lives in its own window (draggable anywhere, per-display positio
 - **Power peak memory** (Plus only) — the Power Meter remembers its all-time peak draw indefinitely. The lamp blinks green while a new peak is being set.
 - **ANE lamp** (Plus only) — the CPU/GPU Gauge's pink lamp lights when the Apple Neural Engine is working and blinks as its utilization rises.
 - **Temperature gauges** (Plus only) — CPU and GPU temperatures on a 30–110 °C scale. The lamp lights at 80 °C and blinks at 90 °C.
-- **System Monitor** — about 50 seconds of CPU and power history drawn as stacked cubes, in three layouts (Overlay / Split / Center; Plus only). Click it to switch to a numeric readout.
+- **System Monitor** — about 50 seconds of CPU and power history drawn as stacked cubes. CPU is split into system (amber) and user (green), and power into the chip (SoC, purple) and everything else (dark purple) (power is Plus only; on Macs whose chip power can't be read, such as Mac mini and Mac Studio, it is a single purple). Three layouts (Overlay / Split / Center; Plus only). Click it to switch to a numeric readout.
 - **Gather Gauges** — lines up the other instruments around the CPU/GPU Gauge's current position.
-- **Quick Reveal** — rest the pointer at the bottom edge of the screen for about half a second to bring the instruments to the front (off by default).
+- **Quick Reveal** — rest the pointer at the bottom edge of the screen for about half a second to bring the instruments to the front (off by default). Hold Shift while they are revealed to show the System Monitor as numbers for as long as you hold it.
 - **Calm needles** — Needle motion is smoothed (EMA + dead band) so gauges stay quiet at idle, with a full ignition-style needle sweep on launch and wake.
 - **Two symbol sets** — "Cloud / Tray" or "Minimal Arrows", switchable from the menu.
 - **Window placement** — "Always on Top" and "Pin to Wallpaper" (pinned to the desktop, click-through). With both off, windows behave normally.
@@ -50,6 +50,9 @@ Each instrument lives in its own window (draggable anywhere, per-display positio
 ```
 brew install --cask EVAtiter/tap/tachometer
 ```
+
+> If Homebrew refuses to load the tap because it is not trusted,
+> run `brew trust --cask EVAtiter/tap/tachometer` first.
 
 ### Manual
 
